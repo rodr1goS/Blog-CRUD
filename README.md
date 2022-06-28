@@ -1,5 +1,5 @@
 # Blog CRUD
-Este crud foi feito com nodejs e com base no conhecimento aprendido no ["Curso de Node.js"](https://youtube.com/playlist?list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B) do Victor lima.
+Este crud foi feito utilizando nodejs e MySQL, com base no conhecimento aprendido no ["Curso de Node.js"](https://youtube.com/playlist?list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B) do Victor lima.
 
 ## Overview
 
@@ -10,6 +10,11 @@ Este crud foi feito com nodejs e com base no conhecimento aprendido no ["Curso d
 ![Explorer](explorerExample.png)
 
 _Teste o crud para ver mais as rotas..._
+
+
+## Como rodar o CRUD ?
+Para executar/rodar, primeiro precisa adicionar as informações necessárias do banco de dados em [Database.js](https://github.com/rodr1goS/Blog-CRUD/blob/main/src/models/Database.js),
+também definir o secret do express-session no arquivo [app.js](https://github.com/rodr1goS/Blog-CRUD/blob/main/src/app.js)(linha 25), e por fim executar `npm run start` ou `npm run dev`e basta acessar a URL `localhost:3333`
 
 ## Rotas
 
