@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {{#if style}}
+        <link rel="stylesheet" href="/css/{{style}}.css" media="all">
+    {{/if}}
+    <link rel="stylesheet" href="/css/partials/style.css" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+</head>
+<body>
+    <header>
+        {{>_navbar}}
+        {{#if error}}
+            <div class="msgBox error">{{error}}</div>
+        {{else}}
+
+        {{/if}}
+        {{>_msg}}
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+    
+    {{#if script}}
+        <script src="/js/{{script}}.js"></script>
+    {{/if}}
+    <script src="/js/index/mobileMenu.js"></script>
+</body>
+</html>

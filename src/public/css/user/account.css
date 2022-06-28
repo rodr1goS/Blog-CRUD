@@ -1,0 +1,157 @@
+#accountTitle {
+	font-family: Arial;
+	margin: 15px 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	gap: 10px;
+}
+
+section > h3 {
+	font-family: Arial;
+	color: #616161;
+	border-bottom: 1px solid #8484846E;
+	padding-bottom: 4px;
+	margin: 10px 0;
+}
+
+.userData {
+	height: 300px;
+}
+
+.userParams {
+	justify-content: flex-start;
+	width: 50%;
+	height: 100%;
+	margin: 15px 0;
+}
+
+.userParams > label {color: #8F8F8F;}
+
+.userParams > input {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	background: rgb(239, 243, 244);
+	border: 1px solid rgb(230, 220, 233);
+	border-radius: 7px;
+	margin-bottom: 9px;
+	transition: all .5s ease;
+}
+
+.userParams > button {
+	width: 100%;
+	height: 30px;
+	color: #fff;
+	margin-top: 5px;
+	background: #1b7ced;
+	transition: all .5s ease;
+}
+
+.userParams > input:focus, .userParams > button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+.userPosts {
+	min-height: 500px;
+}
+
+.feed {
+	width: 90%;
+	min-height: 400px;
+	margin-top: 20px;
+	background: rgba(230, 220, 233, .2);
+	border: 1px solid rgba(230, 220, 233, .5);
+}
+
+.post {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	padding: 3px;
+	margin: 5px 0;
+	color: #393939;
+	border: 1px solid rgb(230, 220, 233);
+	background: rgb(239, 243, 244);
+}
+
+.postInfo > p {
+	color: #484848;
+}
+
+#postTitle::before, #postCreatedData::before {
+	font-family: sans-serif;
+	padding-left: 5px;
+	color: #8F8F8F;
+}
+
+#postTitle::before {
+	content: 'title: ';
+}
+
+#postCreatedData::before {
+	content: 'data: ';
+}
+
+.postActions {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	height: 100%;
+}
+
+.btnAction, .btnPost {
+	width: 70px;
+	height: 30px;
+	color: #fff;
+	margin-top: 5px;
+	background: #1b7ced;
+	transition: all .5s ease;
+}
+
+.edit {background: #1b7ced;}
+
+.deleteAccount {
+	align-items: flex-end;
+	height: 150px;
+}
+
+.accountActions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	gap: 10px;
+}
+
+.accountActions > span {
+	color: #FF6565;
+	font-family: sans-serif;
+}
+
+.accountActions > button, .delete {
+	background-color: #FF6565;
+}
+
+.accountActions > button {
+	width: 150px;
+	height: 42px;
+}
+
+@media only screen and (max-width: 768px) {
+	.userParams, .feed {
+		width: 100%;
+	}
+	
+	.userParams > button {
+		height: 40px;
+	}
+}

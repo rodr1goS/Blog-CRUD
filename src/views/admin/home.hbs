@@ -1,0 +1,42 @@
+<section class="actionsContainer">
+    <h1>Possíveis ações</h1>
+    {{#if data}}
+        <div class="actionAdmin users">
+            <a href="/admin/users">
+                <span>{{data.users}} users</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+        <div class="actionAdmin categories">
+            <a href="/admin/categories">
+                <span>{{data.categories}} categorias</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+        <div class="actionAdmin posts">
+            <a href="/admin/posts">
+                <span>{{data.posts}} postagens</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+    {{else}}
+        <div class="actionAdmin users">
+            <a href="/admin/users">
+                <span>{{data.users}} users</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+        <div class="actionAdmin categories">
+            <a href="/admin/categories">
+                <span>{{data.categories}} categorias</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+        <div class="actionAdmin posts">
+            <a href="/admin/posts">
+                <span>{{data.posts}} postagens</span>
+                <button>Gerenciar</button>
+            </a>
+        </div>
+    {{/if}}
+</section>

@@ -1,0 +1,78 @@
+.postHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 90%;
+	height: 120px;
+	border-bottom: 1px solid rgba(10, 10, 10, .3);
+}
+
+.postHeader > h1 {
+	font-family: Arial;
+	margin-bottom: 8px;
+}
+
+.postInformation {
+	display: flex;
+	gap: 32px;
+}
+
+.infoContainer {display: flex;}
+
+.infoContainer > label {color: rgb(139, 143, 144);}
+
+.infoContainer > p {color: rgb(10, 10, 10);}
+
+.postContent {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: 25px 10px 25px 10px;
+}
+
+.actions {
+	display: flex;
+	width: 90%;
+	justify-content: flex-start;
+	border-top: 1px solid rgba(10, 10, 10, .1);
+}
+
+.actions > a {
+	width: 90px;
+	height: 35px;
+}
+
+#btnBack {
+	width: 90px;
+	height: 35px;
+	padding: 5px;
+	margin: 10px 0 40px 0;
+	cursor: pointer;
+	color: #393939;
+	background: rgb(239, 243, 244);
+	border: 1px solid rgb(230, 220, 233);
+	transition: all .5s ease;
+}
+
+#btnBack:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+#btnBack:hover {
+	background: #1b7ced;
+	color: #fff;
+}
+
+#btnBack:before {
+	content: '\276E';
+	padding: 0 4px;
+}
+
+@media only screen and (max-width: 768px) {
+	.postInformation {
+		flex-direction: column;
+		gap: 10px;
+	}
+}

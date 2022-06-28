@@ -1,0 +1,20 @@
+{{#if errors}}
+    {{#each errors}}
+        <div class="errorsContainer">
+            <div class="msgBox error">&#9888; {{message}}</div>
+        </div>
+    {{/each}}
+{{/if}}
+<form action="/admin/categories/edit" method="POST">
+    <h1>Editando categoria {{category.dataValues.name}}</h1>
+    <div class="paramsContainer">
+        <label for="categoryName">Category:</label>
+        <input class="param" type="text" name="categoryName" placeholder="(category name)" value="{{category.dataValues.name}}">
+        <label for="slug">slug:</label>
+        <input class="param" type="text" name="slug" placeholder="(slug)" value="{{category.dataValues.slug}}">
+        <input name="categoryId" value="{{category.dataValues.id}}" hidden>
+    </div>
+    <a href="/admin/categories/add">
+        <button id="createBtn" type="submit">Create</button>
+    </a>
+</form>

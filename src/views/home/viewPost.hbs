@@ -1,0 +1,21 @@
+<header class="postHeader">
+    <h1>{{post.dataValues.title}}</h1>
+    <section class='postInformation'>
+        <div class='infoContainer'>
+            <label for="dataPost">publicado em:</label>
+            <p name='dataPost'>{{post.dataValues.createdAt}}</p>
+        </div>
+        <div class='infoContainer'>
+            <label for="author">author:</label>
+            <p name="author">{{post.dataValues.author}}</p>
+        </div>
+    </section>
+</header>
+<section class="postContent">
+    {{post.dataValues.content}}
+</section>
+<section class="actions">
+    <a href="/explore">
+        <button id='btnBack'>voltar</button>
+    </a>
+</section>

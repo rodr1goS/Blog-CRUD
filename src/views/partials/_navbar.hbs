@@ -1,0 +1,24 @@
+<nav>
+    <a href="/explore" class="logo">Blog</a>
+    <ul class="navlist">
+        <li><a href="/explore" lang="en">Explore</a></li>
+        {{#if user.admin}}
+            <li><a href="/admin/" lang="en">Admin Panel</a></li>
+            <li><a href="/user/account" lang="en">Account</a></li>
+            <li><a href="/user/logout" lang="en">Logout</a></li>
+        {{else if user}}
+            <li><a href="/user/post" lang="en">Post</a></li>
+            <li><a href="/user/account" lang="en">Account</a></li>
+            <li><a href="/user/logout" lang="en">Logout</a></li>            
+        {{else}}
+            <li><a href="/" lang="en">Home</a></li>
+            <li><a href="/user/login" lang="en">Login</a></li>
+            <li><a href="/user/register">Registrar</a></li>
+       {{/if}}
+    </ul>
+    <div class="mobileMenu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+     </div>
+</nav>

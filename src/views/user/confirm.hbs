@@ -1,0 +1,21 @@
+<div class="confirmContainer">
+    <form action="/user/account/{{type}}" method="POST">
+        <div class="topInfoContainer">
+            <h1>{{authTitle}}</h1>
+            <p>{{description}}</p>
+        </div>
+        <div class="fields">
+            <div>
+                <span>Password:</span><br>
+                <input id="" type="password" name="authPassword" required>
+            </div>
+            <input type="text" name="userId" value="{{data.userId}}" hidden>            
+            <input type="text" name="username" value="{{data.username}}" hidden>
+            <input type="text" name="email" value="{{data.email}}" hidden>
+            <input type="text" name="newPassword" value="{{data.password}}" hidden>            
+        </div>
+        <div class="actions">
+            <button type="submit">Confirmar</button>
+        </div>
+    </form>
+</div>

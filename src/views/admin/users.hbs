@@ -1,0 +1,18 @@
+<section class="containerUsers">
+    <h2>Usuários cadastrados</h2>
+    <div class="users">
+        {{#each users}}
+            <div class="userData">
+                <div class="userInfos">
+                    <p id="username">{{dataValues.name}}</p>
+                    <p id="email">{{dataValues.email}}</p>
+                </div>
+                <div class="userActions">
+                    <a href="/admin/users/delete/{{dataValues.id}}/"><button id="deleteBtn">Deletar</button></a>
+                </div>
+            </div>
+        {{else}}
+
+        {{/each}}
+    </div>
+</section>

@@ -1,0 +1,30 @@
+<header class="searchContainer">
+    <form action="/admin/posts/search" method="POST">
+        <input type="text" name="title" id="title" placeholder="(Pesquise uma postagem)"/>
+        <button type="submit">&#8981;</button>
+    </form>
+</header>
+<section class="feedContainer">
+    <h1>{{feedTitle}}</h1>
+    <div class="feed">
+        {{#each posts}}
+            <div class="postContainer">
+                <h3>{{dataValues.title}}</h3>
+                <p class="postDescription">
+                    {{dataValues.description}}
+                </p>
+                <div class="informations">
+                    <span>Author: {{dataValues.author}}</span>
+                    <span>Categoria: {{dataValues.category}}</span>
+                </div>
+                <div class="actions">
+                    <a href="/post/view/{{dataValues.id}}" id="showMore">ver mais</a>
+                    <a href="/admin/posts/edit/{{dataValues.id}}"><button class='btnAction edit'>Edit</button></a>
+                    <a href="/admin/posts/delete/{{dataValues.id}}"><button class='btnAction delete'>Delete</button></a>
+                </div>
+            </div>
+        {{else}}
+            <h3>Nenhum post encontrado/publicado</h3>
+        {{/each}}
+    </div>
+</section>

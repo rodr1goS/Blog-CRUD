@@ -1,0 +1,26 @@
+<section class="actionsTop">
+    <h1>Categorias</h1>
+    <div>
+        <a href="/admin"><button id="btnBack">Voltar</button></a>
+        <a href="/admin/categories/add"><button id="btnAdd">Adicionar</button></a>
+    </div>
+</section>
+<section class="containerCategories">
+    <h2>Categorias criadas</h2>
+    <div class="feedCategories">
+        {{#each categories}}
+            <div class="category">
+                <div class="categoryData">
+                    <p id="categoryName">{{dataValues.name}}</p>
+                    <p id="categorySlug">{{dataValues.slug}}</p>
+                </div>
+                <div class="categoryActions">
+                    <a href="/admin/categories/edit/{{dataValues.id}}/"><button class="btnCategory edit">Editar</button></a>
+                    <a href="/admin/categories/delete/{{dataValues.id}}/{{dataValues.slug}}"><button class="btnCategory delete">Deletar</button></a>
+                </div>
+            </div>
+        {{else}}
+
+        {{/each}}
+    </div>
+</section>

@@ -1,0 +1,87 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 91vw;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    gap: 10px;
+}
+
+.formContainer > h2 {
+    font-family: Arial;
+    font-size: 18pt;
+    color: #343434;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(10, 10, 10, .2);
+}
+
+.formContainer > textarea {
+    resize: none;
+}
+
+.formContainer > button {
+    color: white;
+    border: none;
+    height: 30px;
+    background-color: #1b7ced;
+}
+
+.formContainer > label {
+    color: #515151;
+}
+
+.formContainer > input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #252525;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    outline: none;
+    transition: all .5s ease;
+}
+
+.formContainer > input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+.formContainer > select:focus, button:focus {
+    outline: none;
+    background-color: rgba(21, 156, 228, 0.4);
+}
+
+@media only screen and (max-width: 768px) {
+    .formContainer {
+        width: 90vw;
+        height: 90vh;
+    }
+    
+    .formContainer > h2 {
+        width: 100%;
+        font-size: 22pt;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .formContainer > label {
+        font-size: 15pt;
+        color: rgba(5, 5, 5, .6);
+    }
+    
+    .formContainer > input, select, textarea, button {
+        box-shadow: 4px 4px 5px rgba(10, 10, 10, .2);
+    }
+    
+    .formContainer > input {
+        height: 40px;
+    }
+    
+    .formContainer > select {
+        height: 30px;
+    }
+    
+    .formContainer > button {
+        height: 50px;
+    }
+}

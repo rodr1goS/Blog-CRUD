@@ -1,0 +1,39 @@
+<header class="topExplore">
+    {{#if user}}
+        <div class="exploreActions">
+            <a href="/user/post/add" id="goToPost"><p>Faça uma postagem</p><p>&#10148;</p></a>
+            <form action="/post/search" method="POST">
+                <input type="text" name="searchTitle" id="searchTitle" placeholder="(Pesquise uma postagem)"/>
+            </form>
+        </div>
+    {{else}}
+        <div class="infoCard">
+            <h1>Faça parte da nossa comunidade</h1>
+            <p>Para fazer postagens é necessário estar logado.</p>
+            <div>
+                <a href="/user/login"><button lang="en">Sign in</button></a>
+                <a href="/user/register"><button lang="en">Sign up</button></a>
+            </div>
+        </div>
+    {{/if}}
+</header>
+<section class="explore">
+    <h1 id="exploreTitle">{{exploreTitle}}</h1>
+    <div class="feed">
+        {{#each posts}}
+            <div class="postContainer">
+                <h3>{{dataValues.title}}</h3>
+                <p class="postDescription">{{dataValues.description}}</p>
+                <div class="informations">
+                    <span>Author: {{dataValues.author}}</span>
+                    <span>Categoria: {{dataValues.category}}</span>
+                </div>
+                <div class="actions">
+                    <a href="/post/view/{{dataValues.id}}" class="action">ver mais</a>
+                </div>
+            </div>
+        {{else}}
+            <h3>Não foi possivel carregar os posts</h3>
+        {{/each}}
+    </div>
+</section>

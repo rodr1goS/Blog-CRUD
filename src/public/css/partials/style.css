@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+header {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+
+a {
+    color: #fff;
+    transition: 0.3s;
+    outline: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial;
+    background: #23232e;
+    width: 100%;
+    height: 9vh;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist > li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+}
+
+.mobileMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobileMenu > div {
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: all .3s;
+}
+
+/* Alert msg */
+.errorsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	width: 90%;
+}
+
+.msgBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+    margin: 2px;
+	color: white;
+	font-family: Arial;
+	font-size: 15pt;
+	animation: right-side .5s ease;
+}
+
+.error {
+	background: #ca3939;
+}
+
+.success {
+	background: #39973f;
+}
+
+@keyframes right-side {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    .navlist {
+        position: absolute;
+        z-index: 2000;
+        top: 9vh;
+        right: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: all .7s;
+    }
+    
+    .navlist > li {
+        margin-left: 0;
+        opacity: 1;
+    }
+    
+    .navlist > li:last-child {
+        padding-bottom: 100px;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    .msgBox {
+        font-size: 12pt;
+        font-weight: bold;
+        margin-top: 4px;
+    }
+}
+
+.navlist.active {
+    left: 0;
+    padding-bottom: 20px;
+}
+
+.mobileMenu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobileMenu.active .line2 {
+    opacity: 0;
+}
+
+.mobileMenu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+

@@ -1,0 +1,32 @@
+{{#if errors}}
+    <div class="errorsContainer">
+        {{#each errors}}
+            <div class="msgBox error">
+                {{message}}
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+<section class="formContainer">
+    <form action="/user/register" method="POST">
+        <h1>Venha fazer parte da comunidade</h1>
+        <div class="fieldContainer">
+            <span>Nome:</span>
+            <input type="text" name="username" placeholder="(nome de 0 a 3 caracteres)" required>
+        </div>
+        <div class="fieldContainer">
+            <span>Email:</span>
+            <input type="email" name="email" placeholder="(um email válido)" required>
+        </div>
+        <div class="fieldContainer">
+            <span lang="en">Password:</span>
+            <input type="password" name="userPassword" placeholder="(senha de 5 a 18 caracteres)" required>
+        </div>
+        <div class="fieldContainer">
+            <span lang="en">Re-password:</span>
+            <input type="password" name="userRepassword" placeholder="(digite a senha novamente)" required>
+        </div>
+        <button type="submit" lang="en">Sign Up</button>
+        <a href="/user/login">Já possui uma conta?</a>
+    </form>
+</section>

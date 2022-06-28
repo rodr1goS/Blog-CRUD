@@ -1,0 +1,79 @@
+body {
+    background: #191b24;
+}
+
+.backgroundCircle {
+	position: absolute;
+	width: 100vw;
+	height: 110vh;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	background: rgb(27,124,237);
+	background: linear-gradient(90deg, rgba(27,124,237,1) 0%, rgba(77,156,248,1) 35%, rgba(116,173,239,1) 100%);
+	clip-path: circle(35% at right 90%);
+}
+
+.homeCardContainer {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.mainCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	height: 300px;
+	padding: 10px;
+    margin: 50px 0;
+	border: 1px solid rgba(210, 210, 255, 0.18);
+	border-radius: 10px;
+	background: rgba(50, 50, 50, 0.45);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(5px);
+}
+
+.mainCard > h1 {
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.mainCard > p {color: #e5e5e5;}
+
+.cardActions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.cardActions > a > button {
+	width: 100%;
+	height: 30px;
+	color: rgb(27, 124, 237);
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid rgb(27, 124, 237);
+	transition: all .5s ease;
+}
+
+.cardActions > a > button:hover {
+	color: #fff;
+	background: rgb(27, 124, 237);
+	backdrop-filter: blur(0.5);
+}
+
+@media only screen and (max-width: 768px) {
+	.mainCard {
+		width: 70vw;
+		height: 300px;
+	}
+}

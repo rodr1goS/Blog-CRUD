@@ -1,0 +1,40 @@
+<h1 id="accountTitle">Bem vindo {{user.name}}!</h1>
+<section class="userData">
+	<h3>Deseja mudar alguns dados?</h3>
+    <form action="/user/account/auth/changes/" method="POST" class="userParams">
+        <input type="text" name="userId" value="{{user.id}}" hidden>
+        <label for="username">username:</label>
+        <input type="text" name="username" placeholder="(username)" value="{{user.name}}">
+        <label for="email">email:</label>
+        <input type="email" name="email" placeholder="(email)" value="{{user.email}}">
+        <label for="password">password:</label>
+        <input type="passaword" name="password" placeholder="(password)">
+        <button type="submit" lang="en">Continue</button>
+    </form>
+</section>
+<section class="userPosts">
+    <h3>Suas Publicações</h3>
+    {{#each userPosts}}
+        <div class="feed">
+            <div class="post">
+                <div class="postInfo">
+                    <p id="postTitle">{{dataValues.title}}</p>
+                    <p id="postCreatedData">{{dataValues.createdAt}}</p>
+                </div>
+                <div class="postActions">
+                    <a href="/user/post/edit/{{dataValues.id}}/"><button class="btnPost edit">Editar</button></a>
+                    <a href="/user/post/delete/{{dataValues.id}}/"><button class="btnPost delete">Deletar</button></a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+    
+    {{/each}}
+</section>
+<section class="deleteAccount">
+    <form action="/user/account/auth/delete" method="POST" class="accountActions">
+        <input type="text" name="userId" value="{{user.id}}" hidden>
+        <span>*Esta ação é irreversível</span>
+        <button class="btnAction">Deletar conta</button>
+    </form>
+</section>

@@ -1,0 +1,20 @@
+{{#if errors}}
+    {{#each errors}}
+        <div class="errorsContainer">
+            <div class="msgBox error">&#9888; {{message}}</div>
+        </div>
+    {{/each}}
+{{/if}}
+<form action="/user/post/edit/" method="POST">
+    <div class="formContainer">
+        <h2>Editando post {{post.dataValues.title}}</h2>
+        <label for="title">Título:</label>
+        <input type="text" name="id" value="{{post.dataValues.id}}" hidden>
+        <input id="title" type="text" name="title" value="{{post.dataValues.title}}">
+        <label for="description">Descrição:</label>
+        <textarea style="height: 90px" name="description" id="description" cols="30" rows="10" required>{{post.dataValues.description}}</textarea>
+        <label for="content">Conteúdo:</label>
+        <textarea style="height: 260px" name="content" id="content" cols="30" rows="10" required>{{post.dataValues.content}}</textarea>
+        <button type="submit" id="btnsubmit">Postar</button>
+    </div>
+</form>

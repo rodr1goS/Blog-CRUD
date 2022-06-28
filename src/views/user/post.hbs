@@ -1,0 +1,28 @@
+{{#if errors}}
+    {{#each errors}}
+        <div class="errorsContainer">
+            <div class="msgBox error">&#9888; {{message}}</div>
+        </div>
+    {{/each}}
+{{/if}}
+<form method="POST">
+    <div class="formContainer">
+        <h2>Formulário de Postagem</h2>
+        <label for="title">Título:</label>
+        <input id="title" type="text" name="title">
+        <label for="description">Descrição:</label>
+        <textarea style="height: 90px" name="description" id="description" cols="30" rows="10" required></textarea>
+        <label for="content">Conteúdo:</label>
+        <textarea style="height: 260px" name="content" id="content" cols="30" rows="10" required></textarea>
+        <label for="slug">Categoria:</label>
+        <select name="slug" id="slug" required>
+            {{#each categories}}
+                <option value="0" selected hidden>Selecione uma categoria</option>
+                <option value="{{dataValues.slug}}">{{dataValues.name}}</option>
+            {{else}}
+                <option value="0" select hidden>Não existe nenhuma categoria ainda...</option>
+            {{/each}}
+        </select>
+        <button type="submit" id="btnsubmit">Postar</button>
+    </div>
+</form>
