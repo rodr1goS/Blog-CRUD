@@ -11,18 +11,18 @@ ul, ol, li {
 }
 
 header {
-	display: flex;
+    display: flex;
     flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-	align-items: center;
+    align-items: center;
 }
 
 a {
@@ -74,45 +74,45 @@ nav {
 
 /* Alert msg */
 .errorsContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 10px;
-	width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
 }
 
 .msgBox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 50px;
-	border: none;
-	border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
     margin: 2px;
-	color: white;
-	font-family: Arial;
-	font-size: 15pt;
-	animation: right-side .5s ease;
+    color: white;
+    font-family: Arial;
+    font-size: 15pt;
+    animation: right-side .5s ease;
 }
 
 .error {
-	background: #ca3939;
+    background: #ca3939;
 }
 
 .success {
-	background: #39973f;
+    background: #39973f;
 }
 
 @keyframes right-side {
-	from {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
+    from {
+	opacity: 0;
+	transform: translateX(-50px);
+    }
+    to {
+	opacity: 1;
+	transform: translateX(0);
+    }
 }
 
 @media only screen and (max-width: 768px) {
